@@ -1,0 +1,359 @@
+/* Global reset for margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Center the text globally */
+}
+
+/* Global styling for headings */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* Profile image circular styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Container for the content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Specific classes for articles and blog.html */
+.article-content, .blog-content, .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left; /* Justified text for paragraphs */
+}
+
+/* Ensuring the paragraphs are spaced and justified */
+.article-content p, .blog-content p, .about-content p {
+  text-align: left; /* Justify the text */
+  margin-bottom: 20px;
+  text-align-last: left; /* Center the last line of justified text */
+}
+
+.article-content h1, .blog-content h1, .about-content h1 {
+  text-align: center;
+}
+
+.article-content h2, .blog-content h2, .about-content h2 {
+  text-align: left;
+  font-size: 1.75em;
+  margin-top: 20px;
+}
+
+/* Navigation menu */
+nav {
+  background-color: #e0e0e0;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #c0c0c0;
+  color: #333;
+}
+
+/* Layout Styles */
+.content-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.content-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Typography Styles */
+h1 {
+  font-size: 2rem;
+}
+
+/* Mosaic grid for articles */
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.mosaic a {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mosaic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+/* Footer left section */
+.footer-left .name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin-top: 5px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Footer right section: smaller circular icon buttons */
+.footer-right .contact-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.footer-right .contact-button i {
+  font-size: 20px;
+}
+
+.footer-right .contact-button:hover {
+  background-color: #0077b5;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right .contact-button i {
+    font-size: 20px;
+  }
+
+  .mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .mosaic {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blog Mosaic Styles */
+.blog-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 80px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.blog-mosaic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-mosaic-item img {
+  width: 100%;
+  height: 200px; /* Adjust height to a fixed value for uniformity */
+  object-fit: cover; /* Ensures images are cropped to fit the container */
+  border-radius: 8px;
+}
+
+.blog-mosaic-item h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .blog-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-mosaic {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Wrapper for content and side menu */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Main content (Text Box) styling */
+.about-content {
+  width: 65%;
+  padding-right: 30px;
+  padding-left: 20px;
+  line-height: 1.7;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Side menu styling */
+.side-menu {
+  width: 30%;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+/* Mosaic grid for side menu */
+.side-menu .mosaic {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.side-menu .mosaic img {
+  border-radius: 5%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .about-content, .side-menu {
+    width: 100%;
+  }
+
+  .side-menu {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+
+
+
+
+
+
